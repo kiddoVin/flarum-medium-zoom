@@ -22,7 +22,7 @@ return [
 <script>
     flarum.core.compat.extend.extend(flarum.core.compat['components/CommentPost'].prototype, 'oncreate', function (output, vnode) {
 const self = this;
-this.$('img').not('.emoji').not(".Avatar").not($(".PostMeta-ip img")).each(function () {
+this.$('img').not('.emoji').not(".Avatar").not($(".PostMeta-ip img")).not('a img').each(function () {
             const zoom = mediumZoom();
             zoom.attach('.Post-body img:not(.emoji):not(.Avatar):not(.PostMeta-ip img)');
 });
